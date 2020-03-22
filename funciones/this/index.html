@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+<body>
+    <script>
+        const usuario = {
+            nombre: 'nacho',
+            login: function(){
+                console.log(this)
+            }
+        };
+        usuario.login()
+
+        let loginExraido = usuario.login
+        loginExraido = loginExraido.bind(usuario);
+
+        function Contador() {
+            this.numero = 0 ;
+            setInterval(() => {
+                console.log(this.numero)
+                console.log(this)
+                this.numero++;
+            }, 1000)
+        }
+
+        console.log(this)
+
+        const constador = new Contador();
+
+    </script>
+</body>
+</html>

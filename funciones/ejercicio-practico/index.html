@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const ordenes = [
+            {principal: "Asado", postre: "Torta", total: 100},
+            {principal: "Asado", postre: "Churros", total: 200},
+            {principal: "Pizza", postre: "Galletas", total: 150},
+            {principal: "Pizza", postre: "Frutas", total: 200}
+        ];
+
+        const totalAsado = ordenes 
+            //.filter(function (orden){
+            //    return orden.principal === 'Asado';
+            //})
+             
+            //.map(function(orden){
+            //    return orden.total;
+            //})
+            //.reduce(function(acumulado, total){
+            //    return acumulado + total ;
+            //}, 0);
+
+            .filter(orden => orden.principal === 'Asado')
+            .map(orden => orden.total)
+            .reduce((acumulado, total)=> acumulado + total, 0);
+           
+        
+            console.log(totalAsado)
+    </script>
+</body>
+</html>
