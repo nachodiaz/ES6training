@@ -7,10 +7,10 @@ const persona = {
     nombre,
     profesion,
     libroFavorito,
+    [`${editorial} - ${libroFavorito}`]: libroFavorito,
     //En ES6 ya no es necesario escribir function()
     leer (){
         console.log('leyendo...')
     }
 }
-
-persona.leer()
+console.log(persona)
