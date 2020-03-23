@@ -13,11 +13,7 @@ map
     .set(15, {nombre: 'Mauricio Pinilla', goles:  12})
     .set(2, {nombre: 'Matías Rodriguez', goles: 9})
 
-for (let [numero, jugador] of map.entries())
-{
-    console.log(numero, jugador)
-}
-
+console.log([...map])
 
 //Primer Problema
 /*
