@@ -4,24 +4,32 @@ function VehiculoProto (marca, numeroDellantas){
    
 }
 
-VehiculoProto.prototype.maximaVelocidad = 100 ;
-
-
 VehiculoProto.prototype.acelerar = function() {
     console.log(`Acelero con mis ${this.numeroDellantas} llantas.`)
 }
 const carro = new VehiculoProto('mazda', 4);
 const carroToyota = new VehiculoProto('Toyota', 4);
-
-
 class Vehiculo {
+
+    static requerimientos(){
+        console.log('necesitas la marca y las llantas')
+    }
+
     constructor(marca, numeroDellantas) {
-        this.marca = marca ; 
-        this.numeroDellantas = numeroDellantas ;
+        this._marca = marca ; 
+        this._numeroDellantas = numeroDellantas ;
     }
 
     acelerar(){
-        console.log(`Acelero con mis ${this.numeroDellantas} llantas.`)
+        console.log(`Acelero con mis ${this._numeroDellantas} llantas.`)
+    }
+
+    get marca(){
+          return `La marca es ${this._marca}`
+    }
+
+    set marca(marca){
+        this._marca = `${marca} 2.0`
     }
 }
 
